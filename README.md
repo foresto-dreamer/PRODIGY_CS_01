@@ -1,5 +1,5 @@
 # PRODIGY_CS_01
-
+caesar_cipher
 ## Description
 This repository contains the solution for Task 1 of my Prodigy Infotech Cybersecurity Internship.  
 The task is to implement the Caesar Cipher algorithm for encrypting and decrypting messages.
