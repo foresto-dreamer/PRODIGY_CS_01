@@ -9,7 +9,13 @@ def encryption(plaintext,shiftkey):
         ciphertext+=alphabet[newposition]
     print(f"The text after encryption is: {ciphertext}")
 
-
+def decryption(ciphertext,shiftkey):
+    plaintext=""
+    for char in ciphertext:          
+        position=alphabet.index(char)
+        newposition=(position-shiftkey)%26
+        plaintext+=alphabet[newposition]
+    print(f"The text after decryption is: {plaintext}")
 
     
 option=input("Type 'e' for encryption and 'd' for decryption:\n")
@@ -17,5 +23,5 @@ text=input("Type your message:")
 shift=int(input("Enter the shift key:\n"))
 if option=="e":
     encryption(plaintext=text,shiftkey=shift)
-#elif option=="d":
-#  decryption(ciphertext=text,shiftkey=shift)
+elif option=="d":
+    decryption(ciphertext=text,shiftkey=shift)
