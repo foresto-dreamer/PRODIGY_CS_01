@@ -17,11 +17,16 @@ def decryption(ciphertext,shiftkey):
         plaintext+=alphabet[newposition]
     print(f"The text after decryption is: {plaintext}")
 
-    
-option=input("Type 'e' for encryption and 'd' for decryption:\n")
-text=input("Type your message:")
-shift=int(input("Enter the shift key:\n"))
-if option=="e":
-    encryption(plaintext=text,shiftkey=shift)
-elif option=="d":
-    decryption(ciphertext=text,shiftkey=shift)
+end=False
+while not end:
+    option=input("Type 'e' for encryption and 'd' for decryption:\n")
+    text=input("Type your message:")
+    shift=int(input("Enter the shift key:\n"))
+    if option=="e":
+        encryption(plaintext=text,shiftkey=shift)
+    elif option=="d":
+        decryption(ciphertext=text,shiftkey=shift)
+    choice=input("Enter 'yes'to continue or enter 'no'to stop:\n")
+    if choice=='no':
+        end=True
+        print("Closing the terminal, Thank You!")
